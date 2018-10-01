@@ -1,25 +1,16 @@
 class School
   attr_reader :school_name, :add_student, :grade
   attr_accessor :roster
-     #I want to create an empty roster that is a hash for every new school added
-     # how do i create an empty hash assigned to every instance?
-  
   def initialize(school_name)
     @school_name = school_name
     @roster = {}
    end
- 
-  ## what i want here, is to have
-## roster = {:grade => ["name1", "name2", etc]}
   def add_student(name, grade)
     @name = name
     @grade = grade
     @roster[grade] ||= [] 
     @roster[grade] << name 
-    #go through the array, and if the grade is not there, add another empty key (grade) and << name
-    #if it is there, add just the name
-     #### THIS METHOD WILL: EVERY TIME A STUDENT IS ADDED (HOGWARTS.ADD_STUDENT(NAME, GRADE), 
-    ####                   IT WILL CREATE AN ARRAY OF NAMES FOR THAT GRADE IF IT DOESN'T ALREADY EXIST).
+    
   end
    def grade(grades)
     @roster.select do |grade, names|
