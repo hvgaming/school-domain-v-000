@@ -18,7 +18,7 @@ end
  end
   
   def sort
-  roster.values.flatten do |key, value|
+  roster.values do |key, value|
     roster[key] = value
   end
   end 
