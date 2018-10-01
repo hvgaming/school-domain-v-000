@@ -18,7 +18,7 @@ end
  end
   
   def sort
-  roster.sort do |key, value|
+  roster.include? do |key, value|
     roster[key] = value
   end
   end 
