@@ -18,7 +18,7 @@ end
  end
   
   def sort
-  roster.values do |key, value|
+  roster.each do |key, value|
     roster[key] = value
   end
   end 
