@@ -18,8 +18,8 @@ end
  end
   
   def sort
-  school.sort do |key, value|
-   school[key] = value
+  roster.each do |key, value|
+   roster[key] = value
   end
   end 
 end
